@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>School Page</title>
+  </head>
+  <body>
+    <h2>All Staff Directory</h2>
+    <ul>
+        {% for indiv in all_group %}
+          {% if indiv.employee_id %}
+            <li><a href="/staff/{{indiv.employee_id}}">{{indiv.name}}</a></li>
+          {% else %}
+            <li><a href="/students/{{indiv.school_id}}">{{indiv.name}}</a></li>
+          {% endif %}
+        {% endfor %}
+    </ul>
+  </body>
+</html>

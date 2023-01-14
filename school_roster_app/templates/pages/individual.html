@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>School Page</title>
+  </head>
+  <body>
+    <h2>{{indiv.role}}</h2>
+    <ul>
+        <li>{{indiv.name}}</li>
+        <li>{{indiv.age}}</li>
+        <li>{{indiv.password}}</li>
+        {% if indiv.employee_id %}
+            <li>{{indiv.employee_id}}</li>
+        {% else %}
+            <li>{{indiv.school_id}}</li>
+        {% endif %}
+    </ul>
+  </body>
+</html>
