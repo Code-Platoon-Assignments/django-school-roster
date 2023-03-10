@@ -2,17 +2,17 @@
 
 ## Introduction
 
-We're revisiting our School Interface project from before, but now our goal will be to take in data from json files and present them on webpages using Django. Normally, we'd be using databases with Django, however we're not ready for that just yet!
+We're revisiting our School Interface project from before, but now our goal will be to take in data from json files and present them on webpages using Django. Usually this information would live in a database and we will see how to do that with Django soon.
 
-We've provided you with some starter code from our old School Interface project, which already has our classes and data reading logic implemented. You will have to create a Django project from scratch, move some code around, add in some views, templating, and routing logic to eventually produce a website to present our data. We will not be writing (creating/updating/deleting) any new data for this project.
+We've provided you with  starter code from the School Interface project, which already has  classes and data reading logic implemented. You will have to create a Django project from scratch, move some code around, add in some views, templating, and routing logic to eventually produce a website to present our data. We will not be creating any new data or modifying the existing data for this assignmet.
 
 ## 1. Create Django Project
 
-Our first step will be to create a Django project. This is something that requires a number of steps, so let's make sure we walk through these steps together here:
+First, we'll create a Django project. 
 
-0. Navigate into your project directory (if not already in there) in VS Code's terminal
+1. Navigate into your project directory (if not already in there) in VS Code's terminal
 
-1. Create a virtual environment
+2. Create a virtual environment
 
 ```bash
 $> python -m venv .venv
@@ -21,7 +21,7 @@ $> python -m venv .venv
 - This will create a new virtual environment in a folder called `.venv`.
 - IMPORTANT: Remember to create a .gitignore file to ignore this entire folder!!! It should not be commited to your git project.
 
-2. Load virtual environment
+3. Load virtual environment
 
 ```bash
 $> source .venv/bin/activate
@@ -29,7 +29,7 @@ $> source .venv/bin/activate
 
 - This is the command (for MacOS) to get into the virtual environment. You should see the virtual environment name (".venv") added to your command prompt message.
 
-3. Install Django
+4. Install Django
 
 ```bash
 $> pip install django
@@ -37,7 +37,7 @@ $> pip install django
 
 - This command will install the latest Django version into your virtual environment.
 
-4. Save dependency version (optional)
+5. Save dependency version (optional)
 
 ```bash
 $> pip freeze > requirements.txt
@@ -45,7 +45,7 @@ $> pip freeze > requirements.txt
 
 - This command will create a new file and store the results of pip freeze into it.
 
-5. Create Django project
+6. Create Django project
 
 ```bash
 $> django-admin startproject school_roster_proj .
@@ -53,7 +53,7 @@ $> django-admin startproject school_roster_proj .
 
 - This command will initialize a new Django project folder with files, and the all important `manage.py`. The "." at the end of the command prevents having nested folders.
 
-6. Create Django app
+7. Create Django app
 
 ```bash
 $> python manage.py startapp school_roster_app
@@ -61,7 +61,7 @@ $> python manage.py startapp school_roster_app
 
 - This command will initialize a new Django application folder with files.
 
-7. Update Django project settings with app name
+8. Update Django project settings with app name
 
 ```python
 # school_roster_proj/settings.py
@@ -79,7 +79,7 @@ INSTALLED_APPS = [
 
 - This will tell our Django project to also use our newly create app
 
-8. Apply migrations (optional)
+9. Apply migrations (optional)
 
 ```bash
 $> python manage.py migrate
@@ -87,7 +87,7 @@ $> python manage.py migrate
 
 - This is optional right now, but will remove the warning about "unapplied migrations" when we run our server. You don't need to worry about what this is really doing right now (we'll cover it later on).
 
-9. Launch Server
+10. Launch Server
 
 ```bash
 $> python manage.py runserver
@@ -95,7 +95,7 @@ $> python manage.py runserver
 
 - You should see a message in your terminal stating something like "Starting development server at http://127.0.0.1:8000/"
 
-10. Open a browser and navigate to `http://localhost:8000/`
+11. Open a browser and navigate to `http://localhost:8000/`
 
 - If everything worked correctly, you should see a Django rocket lifting off! (This is the default Django landing page.)
 
